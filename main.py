@@ -15,7 +15,9 @@ import shutil
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-SOURCE = HERE / "entry.png"
+# The image ships in this repo as entry.jpg (JPEG bytes); the program
+# writes it out as /output/entry.png, the name the harness requires.
+SOURCE = HERE / "entry.jpg"
 OUTPUT_DIR = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
 
 
